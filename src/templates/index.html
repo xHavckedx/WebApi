@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Usuarios en memoria - Flask</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 1rem; }
+      button { margin: .5rem 0; padding: .5rem 1rem; }
+      pre { background:#f5f5f5; padding:1rem; border-radius:6px; overflow:auto; }
+      form { margin-top: 1rem; display: grid; gap: .5rem; max-width: 400px; }
+      label { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h1>Microservicio: Usuarios en memoria</h1>
+
+    <section>
+      <button id="btn-list">Ver todos los usuarios (GET /api/users)</button>
+      <pre id="output">Pulsa "Ver todos los usuarios" para cargar el JSON aquí.</pre>
+    </section>
+
+    <section>
+      <button id="btn-toggle-form">Mostrar/Ocultar formulario de añadir</button>
+
+      <form id="add-form" style="display:none;" onsubmit="return false;">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" required type="email" />
+
+        <button id="btn-add">Añadir usuario (POST /api/users)</button>
+      </form>
+
+      <div id="add-result" style="margin-top:.5rem;"></div>
+    </section>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>
