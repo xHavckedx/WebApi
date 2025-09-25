@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "WebApi"
-        CONTAINER_NAME = "WebApi"
+        IMAGE_NAME = "webapi"
+        CONTAINER_NAME = "webapi"
     }
 
     stages {
